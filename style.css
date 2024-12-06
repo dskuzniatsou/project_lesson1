@@ -1,0 +1,179 @@
+* {
+    margin: 0; /* внешние отступы */  
+    padding: 0; /* внутренние отступы */
+    box-sizing: border-box; /* границы и внутренние отступы теперь не увеличивают размер элементов */
+}
+section {
+    background: #eff2f9;
+    height: 100vh;
+}
+.card {
+    width: 1170px; /* ширина */
+    height: 800px; /* высота */
+    background: #fff; /* цвет фона */
+    box-shadow: 20px 20px 40px 0px rgba(81, 91, 117, 0.25); /* тень, значения: сдвиг-x | сдвиг-y | размытие | растяжение | цвет */
+    padding: 60px 0px 70px;
+    ;
+}
+.product-image-block {
+    border-right: 2px solid rgba(20, 20, 20, 0.15); /* значения - толщина | тип | цвет  */
+    width: 540px;
+}
+.preview {
+    width: 80;
+    height: 80;
+}
+.preview.selected {
+    boxShadow: 8px 8px 16px rgba(81, 91, 117, 0.25);
+}
+.product-info-block {
+    padding: 0 60px; /* внутренний отступ, значения: верх+низ | лево+право */
+}
+.main-title {
+    color: #141414; /* цвет текста */
+    font-family: Montserrat; /* семейство шрифтов */
+    font-size: 38px; /* размер шрифта */
+    font-style: normal; /* стиль шрифта */
+    font-weight: 700; /* толщина (жирность) */
+    line-height: normal; /* высота строки */
+    letter-spacing: 0.38px; /* межбуквенное расстояние */
+}
+.subtitle {
+    color: rgba(20, 20, 20, 0.40);
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.16px;
+}
+.text {
+    color: rgba(20, 20, 20, 0.70);
+    font-family: Rubik;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px; 
+    letter-spacing: 0.18px;
+}
+.title {
+    color: rgba(20, 20, 20, 0.40);
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.16px;
+    text-transform: uppercase;  /* все буквы заглавные (caps) */
+}
+ul {
+    list-style: none;  /* тип маркера */
+}
+.circle {
+    width: 16px;
+    height: 16px;
+    filter: drop-shadow(2px 2px 4px rgba(81, 91, 117, 0.25));  /* тень с повторением контура фигуры, значения: сдвиг-x | сдвиг-y | размытие | цвет */
+    border-radius: 50%; /* скругление углов чтобы сделать из квадрата круг*/
+}
+.blue {
+    background-color: #013C7D;
+}
+.green {
+    background-color: #63CBA7;
+}
+.red {
+    background-color: #D52F29;
+}
+.black {
+    background-color: #141414;
+}
+.yellow {
+    background-color: #F2C723;
+}
+i.selected {
+    width: 30px;
+    height: 30px;
+    padding: 7px;
+    box-shadow: 2px 2px 6px 0px rgba(81, 91, 117, 0.25);
+    border-radius: 50%;
+} 
+.quantity {
+    width: 80px; /* ширина выпадающего списка */
+    /* стили для текста выпадающего списка*/
+    font-family: Rubik;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    color: rgba(20, 20, 20, 0.8);
+    border: none; /* убираем границу */
+    appearance: none; /* убираем стрелку, которую браузер отображает по умолчанию */
+    /* устанавливаем свою стрелку */
+    background-image: url("./assets/images/Vector.svg");
+    background-repeat: no-repeat;
+    background-position: right 0 top 50%;
+}
+.price {
+    color: rgba(20, 20, 20, 0.80);
+    font-family: Rubik;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+} 
+.btn {
+    /* свойства для формы */
+    height: 70px;
+    width: 100%;
+    background: #141414;
+    /* свойства для текста внутри кнопки */
+    color: #FFF;
+    font-family: Rubik;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.18px;
+    margin-top: 75px;
+}  
+.subtitle {
+    color: rgba(20, 20, 20, 0.40);
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.16px;
+    margin-bottom: 60px;
+}
+.text {
+    color: rgba(20, 20, 20, 0.70);
+    font-family: Rubik;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px; /* 166.667% */
+    letter-spacing: 0.18px;
+    margin-bottom: 65px;
+}
+.colors {
+    margin-bottom: 65px;
+}
+.title {
+    color: rgba(20, 20, 20, 0.40);
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.16px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+body {
+    font-style: normal;
+    line-height: normal;
+    font-family: Rubik, sans-serif; /* sans-serif - fallback */
+} 

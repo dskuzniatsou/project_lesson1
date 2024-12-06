@@ -24,7 +24,7 @@ section {
     height: 80;
 }
 .preview.selected {
-    boxShadow: 8px 8px 16px rgba(81, 91, 117, 0.25);
+    box-Shadow: 8px 8px 16px rgba(81, 91, 117, 0.25);
 }
 .product-info-block {
     padding: 0 60px; /* внутренний отступ, значения: верх+низ | лево+право */

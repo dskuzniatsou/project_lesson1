@@ -3,6 +3,11 @@
     padding: 0; /* внутренние отступы */
     box-sizing: border-box; /* границы и внутренние отступы теперь не увеличивают размер элементов */
 }
+body {
+    font-style: normal;
+    line-height: normal;
+    font-family: Rubik, sans-serif; /* sans-serif - fallback */
+} 
 section {
     background: #eff2f9;
     height: 100vh;
@@ -36,15 +41,19 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.preview:hover, 
+.preview.selected{
+    box-shadow: 8px 8px 16px 0px rgba(81, 91, 117, 0.25);
 }
 .previews-wrapper{
     display: flex;
     justify-content: center;
     gap: 60px;
 }
-.preview.selected {
-    box-Shadow: 8px 8px 16px rgba(81, 91, 117, 0.25);
-}
+
 .product-info-block {
     padding: 0 60px; /* внутренний отступ, значения: верх+низ | лево+право */
     display: flex;
@@ -141,6 +150,7 @@ i.selected {
     background-image: url("./assets/images/Vector.svg");
     background-repeat: no-repeat;
     background-position: right 0 top 50%;
+    cursor: pointer;
 }
 .price {
     color: rgba(20, 20, 20, 0.80);
@@ -166,6 +176,8 @@ i.selected {
     line-height: normal;
     letter-spacing: 0.18px;
     margin-top: 75px;
+    cursor: pointer;
+    transition: 0.2s;
 }  
 .subtitle {
     color: rgba(20, 20, 20, 0.40);
@@ -202,13 +214,24 @@ i.selected {
     text-transform: uppercase;
     margin-bottom: 20px;
 }
-body {
-    font-style: normal;
-    line-height: normal;
-    font-family: Rubik, sans-serif; /* sans-serif - fallback */
-} 
+
 .color-items {
     display: flex;
     align-items: center;
     gap: 40px; 
+}
+.color-items > li {
+    width: 30px;
+    height: 30px;
+    padding: 7px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.color-items > li:hover,
+.color-items > li.selected {
+    box-shadow: 2px 2px 6px 0px rgba(81, 91, 117, 0.25);
+}
+.btn:hover {
+    transform: translateY(-5px);
 }

@@ -6,6 +6,9 @@
 section {
     background: #eff2f9;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
 }
 .card {
     width: 1170px; /* ширина */
@@ -13,21 +16,39 @@ section {
     background: #fff; /* цвет фона */
     box-shadow: 20px 20px 40px 0px rgba(81, 91, 117, 0.25); /* тень, значения: сдвиг-x | сдвиг-y | размытие | растяжение | цвет */
     padding: 60px 0px 70px;
-    ;
+    display: flex;
 }
 .product-image-block {
     border-right: 2px solid rgba(20, 20, 20, 0.15); /* значения - толщина | тип | цвет  */
-    width: 540px;
+    min-width: 540px;
+    display: flex;
+    flex-direction: column; 
+}
+.main-image-wrapper{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .preview {
     width: 80;
     height: 80;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.previews-wrapper{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
 }
 .preview.selected {
     box-Shadow: 8px 8px 16px rgba(81, 91, 117, 0.25);
 }
 .product-info-block {
     padding: 0 60px; /* внутренний отступ, значения: верх+низ | лево+право */
+    display: flex;
+    flex-direction: column;
 }
 .main-title {
     color: #141414; /* цвет текста */
@@ -38,6 +59,7 @@ section {
     line-height: normal; /* высота строки */
     letter-spacing: 0.38px; /* межбуквенное расстояние */
 }
+
 .subtitle {
     color: rgba(20, 20, 20, 0.40);
     font-family: Lato;
@@ -97,10 +119,17 @@ i.selected {
     box-shadow: 2px 2px 6px 0px rgba(81, 91, 117, 0.25);
     border-radius: 50%;
 } 
+.wrapper{
+    display: flex;
+}
+.wrapper > div {
+    flex-grow: 1;
+}
 .quantity {
+    font-family: inherit;
     width: 80px; /* ширина выпадающего списка */
     /* стили для текста выпадающего списка*/
-    font-family: Rubik;
+    
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -145,8 +174,9 @@ i.selected {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    letter-spacing: 0.16px;
     margin-bottom: 60px;
+    letter-spacing: 0.16px;
+ 
 }
 .text {
     color: rgba(20, 20, 20, 0.70);
@@ -177,3 +207,8 @@ body {
     line-height: normal;
     font-family: Rubik, sans-serif; /* sans-serif - fallback */
 } 
+.color-items {
+    display: flex;
+    align-items: center;
+    gap: 40px; 
+}

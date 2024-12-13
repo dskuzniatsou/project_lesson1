@@ -14,12 +14,16 @@
     <section>
         <div class="card">
             <div class="product-image-block">
-                <img class="main-image" src="./assets/images/main-image.png" alt="main-image">
-                <div class="preview selected">
-                    <img src="./assets/images/image-1.png" alt="image-1">
+                <div class="main-image-wrapper">
+                    <img class="main-image" src="./assets/images/main-image.png" alt="main-image">
                 </div>
-                <div class="preview">
-                    <img src="./assets/images/image-2.png" alt="image-2">
+                <div class="previews-wrapper">
+                    <div class="preview selected">
+                        <img src="./assets/images/image-1.png" alt="image-1">
+                    </div>
+                    <div class="preview">
+                        <img src="./assets/images/image-2.png" alt="image-2">
+                    </div>
                 </div>
             </div>
             <div class="product-info-block"> 
@@ -30,7 +34,7 @@
                       created out of a deep respect for Royal British history and traditions</p>
                     <div class="colors">
                         <h2 class="title">Color options</h2>
-                        <ul>
+                        <ul class="color-items">
                             <li class="selected">
                                 <div class="circle blue" ></div>
                             </li>
@@ -48,17 +52,19 @@
                             </li>
                         </ul>
                     </div>
-                    <div>
-                        <h2  class="title">quantity</h2>
-                        <select class="quantity" name="quantity" id="quantity">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                        </select>
-                    </div>
-                    <div>
-                        <h2  class="title">price</h2>
-                        <span class="price">eur 39,00</span>
+                    <div class="wrapper">
+                        <div>
+                            <h2  class="title">quantity</h2>
+                            <select class="quantity" name="quantity" id="quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>
+                        <div class="price">
+                            <h2  class="title">price</h2>
+                            <span class="price">eur 39,00</span>
+                        </div>
                     </div>
                     <button class="btn">Add To Basket</button>
             </div>

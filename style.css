@@ -1,3 +1,4 @@
+
 * {
     margin: 0; /* внешние отступы */  
     padding: 0; /* внутренние отступы */
@@ -7,17 +8,19 @@ body {
     font-style: normal;
     line-height: normal;
     font-family: Rubik, sans-serif; /* sans-serif - fallback */
+    min-width: 375px;
 } 
 section {
     background: #eff2f9;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items:center;
 }
+
 .card {
     width: 1170px; /* ширина */
-    height: 800px; /* высота */
+    min-height: 800px; /* высота */
     background: #fff; /* цвет фона */
     box-shadow: 20px 20px 40px 0px rgba(81, 91, 117, 0.25); /* тень, значения: сдвиг-x | сдвиг-y | размытие | растяжение | цвет */
     padding: 60px 0px 70px;
@@ -234,4 +237,60 @@ i.selected {
 }
 .btn:hover {
     transform: translateY(-5px);
+}
+
+@media screen and (max-width: 1440px) {
+    .card {
+        width: 690px; /* меняем ширину карточки */
+        flex-direction: column; /* перемещаем правую часть ПОД левую */
+        margin: 40px; /* меняем отступы снаружи вокруг карточки */
+    }
+    .product-image-block {
+        border-right: none;
+        border-bottom: 2px solid rgba(20, 20, 20, 0.15);
+    }
+    .previews-wrapper {
+        margin: 60px 0 70px;
+    }
+    .product-info-block {
+        padding-top: 60px;
+    }
+}
+@media screen and (max-width: 576px) {
+    .card {
+        margin: 15px; /* меняем внешние отступы */
+    }
+ 
+    .product-image-block {
+        min-width: auto; /* ширину верхнего блока делаем по умолчанию (будет по ширине родителя) */
+    }
+    .main-image {
+        width: 250px; /* изменяем ширину главного изображения, высота подстроится автоматически */
+    }
+ 
+    .product-info-block {
+        /* изменяем отступы в нижнем блоке */
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+ 
+    .main-title {
+        font-size: 34px; /* меняем размер шрифта */
+    }
+ 
+    .subtitle {
+        /* меняем размер шрифта и нижний отступ снаружи для подзаголовка */
+        font-size: 14px;
+        margin-bottom: 50px;
+    }
+ 
+    .text {
+        /* меняем размер шрифта и нижний отступ снаружи для текста */
+        font-size: 16px;
+        margin-bottom: 55px;
+    }
+ 
+    .btn {
+        margin-top: 65px; /* меняем размер нижнего отступа снаружи для кнопки */
+    }
 }
